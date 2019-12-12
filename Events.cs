@@ -35,7 +35,7 @@ Implement
 	{
 		//Create an EventHander that uses EventArgs
 		public event EventHandler<EventArgsExample> OnEventRaised = delegate {};
-		
+
 		//Create a method matching the EventArgs parameters to raise the Event
 		public void RaiseEvent(string name)
 		{
