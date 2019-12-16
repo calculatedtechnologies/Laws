@@ -1,23 +1,21 @@
 Law
 	Create events efficiently.
 	
-Design
-	Publisher
-		Create an EventArgs class to share data.
-		Identify class that will publish/raise event
-		Create an EventHander that uses EventArgs
-		Create a method matching the EventArgs parameters to raise the Event
-	Subscriber
-		Identify class that will subscribe to publisher
-		Create a subscription method matching the EventHandler signature
-		Do something with the EventArgs data inside the subscription method
-		Invoke an event in the subscriber if applicable
-		
-	Instatiate & Subscribe
-		Create an instance of the publisher class
-		Create an instance of the subscriber class
-		Subscribe to the publisher			
-	
+Publisher
+•	Create a class that implements “EventArgs” to share data.
+•	Identify class that will publish/raise event
+•	Create an “EventHander” that uses your class that implements “EventArgs”
+•	Create a method matching the “EventArgs” parameters to raise the event
+Subscriber
+•	Identify class that will subscribe to publisher
+•	Create a subscription method matching the “EventHandler” signature
+•	Do something with the “EventArgs” data inside the subscription method
+•	Invoke an event in the subscriber if applicable	
+Instantiate & Subscribe
+•	Create an instance of the publisher class
+•	Create an instance of the subscriber class
+•	Subscribe to the publisher			
 Test
-
+•	Write Unit Test that asserts that the subscriber was notified when the publisher raised event. 
+		
 Snippet
