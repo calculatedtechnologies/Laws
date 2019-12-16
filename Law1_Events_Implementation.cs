@@ -50,7 +50,8 @@ namespace CalculatedTechnologiesLibrary.Laws
 
             //Create an instance of the subscriber class
             SubscriberExample subscriberExample = new SubscriberExample();
-
+            
+            //Subscribe to publisher
             publisherExample.OnEventRaised += subscriberExample.EventExampleListener;
         }
     }
