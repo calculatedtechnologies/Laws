@@ -7,5 +7,5 @@ private void BindModelToControlText(Control control, string propertyName, Model 
 
 public void BindControlsToModel()
 {
-  BindModelToControlText(control, "model.Property");
+  BindModelToControlText(control, "PropertyName");
 }
