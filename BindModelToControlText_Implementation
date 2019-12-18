@@ -5,7 +5,7 @@ private void BindModelToControlText(Control control, string propertyName, Model 
     control.DataBindings.Add("Text", model, propertyName, true, DataSourceUpdateMode.OnPropertyChanged);
 }
 
-public void Main()
+public void BindControlsToModel()
 {
   BindModelToControlText(control, "model.Property");
 }
