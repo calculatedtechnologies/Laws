@@ -1,0 +1,11 @@
+
+
+private void BindModelToControlText(Control control, string propertyName, Model model)
+{
+    control.DataBindings.Add("Text", model, propertyName, true, DataSourceUpdateMode.OnPropertyChanged);
+}
+
+public void Main()
+{
+  BindModelToControlText(control, "model.Property");
+}
