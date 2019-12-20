@@ -38,8 +38,8 @@ namespace CalculatedTechnologiesLibrary.Laws
 
             //Invoke an event in the subscriber if applicable
             //OnEventRaised?.Invoke();
+        }
     }
-}
 
     class Application
     {
