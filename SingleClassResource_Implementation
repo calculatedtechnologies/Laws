@@ -1,0 +1,14 @@
+//Private field to store value
+private ExcelAPI _xlApi;
+private ExcelAPI XLAPI
+{
+    get
+    {
+        if (_xlApi is null)
+        {
+            _xlApi = ExcelAPI.Create();
+        }
+        
+        return _xlApi;
+    }
+}
