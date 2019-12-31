@@ -1,0 +1,8 @@
+//Random Number Generator
+//Produces a random number according to user provided range.
+
+//Create generator
+Random rnd = new Random();
+
+//Set range
+int month  = rnd.Next(1, 13);  // creates a number between 1 and 12
