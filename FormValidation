@@ -1,0 +1,40 @@
+//Allow user to escape control on failed validation
+void InitializeComponent()
+{
+  this.cancelButton.CausesValidation = false;
+}
+
+//Event listener method
+void ExampleControl_Validating(object sender, CancelEventArgs e)
+{
+  //Cast sender to Type
+  Control control = (Control) sender;
+  string error = null;
+  
+  //Validate control value
+  if(string.IsNullOrWhiteSpace(sender.Text))
+  {
+    //Specify error message
+    error = "Field cannot be empty";
+    
+    //Dont allow form to accept text value
+    e.Cancel = true;
+  }
+  //Alert user with error message next to control
+  errorProvider1.SetError(control, error);
+}
+
+//Form submit button click event listener
+void okButton_Click(object sender, EventArgs e)
+{
+  //Validate each direct child control manually
+  foreach( Control control in this.Controls())
+  {
+    control.focus();
+    if(this.Validate == false)
+    {
+      this.DialogResult = DialogResult.None;
+      break;
+    }
+  }
+}
