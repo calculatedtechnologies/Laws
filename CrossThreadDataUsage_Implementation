@@ -1,0 +1,12 @@
+private void WriteTextSafe(string text)
+{
+    if (listBox1.InvokeRequired)
+    {
+        var d = new SafeCallDelegate(WriteTextSafe);
+        listBox1.Invoke(d, new object[] { text });
+    }
+    else
+    {
+        listBox1.Items.Add(text);
+    }
+}
